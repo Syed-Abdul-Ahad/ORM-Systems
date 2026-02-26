@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const arrowSvg = (
   <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none" className="inline ml-1 align-middle">
@@ -26,7 +27,7 @@ const Solutions = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Card 1 */}
           <div className="flex flex-col">
-            <img src="/Solution1.jpg" alt="Sustainability" className="w-full h-48 object-cover" />
+            <Image src="/Solution1.jpg" alt="Sustainability" width={400} height={192} className="w-full h-48 object-cover" />
             <div className="p-6 flex flex-col flex-1">
               <h3 className="text-black font-forma text-[25px] font-normal not-italic leading-normal mb-2" style={{ fontFamily: 'Forma DJR Micro, Arial, Helvetica, sans-serif', fontWeight: 400 }}>
                 Innovating for Sustainability
@@ -41,7 +42,7 @@ const Solutions = () => {
           </div>
           {/* Card 2 */}
           <div className="flex flex-col md:mt-2 lg:mt-4">
-            <img src="/Solution2.jpg" alt="Community" className="w-full h-48 object-cover" />
+            <Image src="/Solution2.jpg" alt="Community" width={400} height={192} className="w-full h-48 object-cover" />
             <div className="p-6 flex flex-col flex-1">
               <h3 className="text-black font-forma text-[25px] font-normal not-italic leading-normal mb-2" style={{ fontFamily: 'Forma DJR Micro, Arial, Helvetica, sans-serif', fontWeight: 400 }}>
                 Powering Inclusive Communities<br />Powering Inclusive
@@ -56,7 +57,7 @@ const Solutions = () => {
           </div>
           {/* Card 3 */}
           <div className="flex flex-col">
-            <img src="/Solution3.jpg" alt="Leadership" className="w-full h-48 object-cover" />
+            <Image src="/Solution3.jpg" alt="Leadership" width={400} height={192} className="w-full h-48 object-cover" />
             <div className="p-6 flex flex-col flex-1">
               <h3 className="text-black font-forma text-[25px] font-normal not-italic leading-normal mb-2" style={{ fontFamily: 'Forma DJR Micro, Arial, Helvetica, sans-serif', fontWeight: 400 }}>
                 Leading with Purpose

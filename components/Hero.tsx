@@ -1,12 +1,15 @@
+import Image from 'next/image';
+
 const Hero = () => {
   return (
     <section className="w-full min-h-[420px] relative flex items-center justify-center overflow-hidden" style={{ minHeight: 420 }}>
       {/* Background Image */}
-      <img
+      <Image
         src="/Hero.png"
         alt="Data Center Hero"
-        className="absolute inset-0 w-full h-full object-cover object-right md:object-center z-0"
-        style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+        fill
+        className="object-cover object-right md:object-center z-0"
+        priority
       />
      
       {/* Content */}

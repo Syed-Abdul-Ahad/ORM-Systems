@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navLinks = [
   'BRANDS',
@@ -19,7 +20,7 @@ const Header = () => {
       <div className="mx-auto flex items-center justify-between h-20 px-4 md:px-12 relative">
         {/* Logo */}
         <div className="flex items-center h-full">
-          <img src="/Logo.svg" alt="ORM Systems Logo" className="h-8 sm:h-12 w-auto" />
+          <Image src="/Logo.svg" alt="ORM Systems Logo" width={120} height={48} className="h-8 sm:h-12 w-auto" priority />
         </div>
 
         {/* Desktop Nav */}
@@ -70,7 +71,7 @@ const Header = () => {
                 &times;
               </button>
               <div className="flex items-center mb-8">
-                <img src="/Logo.svg" alt="ORM Systems Logo" className="h-8 w-auto" />
+                <Image src="/Logo.svg" alt="ORM Systems Logo" width={120} height={32} className="h-8 w-auto" />
               </div>
               <nav className="flex flex-col space-y-6">
                 {navLinks.map((link) => (

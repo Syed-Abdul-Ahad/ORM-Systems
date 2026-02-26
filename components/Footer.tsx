@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
     <footer className="w-full bg-black border-t border-t-slate-800 pt-16 pb-6 px-4 md:px-0">
       <div className="max-w-275 mx-auto flex flex-col items-center">
         {/* Logo */}
-        <img src="/Logo-White.png" alt="ORM Systems Logo" className="h-14 w-auto mb-6" />
+        <Image src="/Logo-White.png" alt="ORM Systems Logo" width={150} height={56} className="h-14 w-auto mb-6" />
 
         {/* Description */}
         <p className="text-white text-center font-forma text-[13.5px] font-normal not-italic leading-[24px] mb-6 max-w-2xl">
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="w-full flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
           {/* Phone */}
           <div className="flex items-center gap-2">
-            <img src="/icons/phone.svg" alt="Phone" className="h-5 w-5" />
+            <Image src="/icons/phone.svg" alt="Phone" width={20} height={20} className="h-5 w-5" />
             <span className="text-white text-center font-forma text-[13.5px] font-normal not-italic leading-14.25 capitalize">000-000-000</span>
           </div>
           {/* Links */}
@@ -49,13 +50,13 @@ const Footer = () => {
         {/* Socials */}
         <div className="flex gap-4">
           <a href="#" className="flex items-center justify-center rounded-[3px] border border-[#E2E2E2] size-[31.5px] hover:bg-white/10 transition-colors">
-            <img src="/icons/facebook.svg" alt="Facebook" className="h-4 w-4" />
+            <Image src="/icons/facebook.svg" alt="Facebook" width={16} height={16} className="h-4 w-4" />
           </a>
           <a href="#" className="flex items-center justify-center rounded-[3px] border border-[#E2E2E2] size-[31.5px] hover:bg-white/10 transition-colors">
-            <img src="/icons/twitter.svg" alt="Twitter" className="h-4 w-4" />
+            <Image src="/icons/twitter.svg" alt="Twitter" width={16} height={16} className="h-4 w-4" />
           </a>
           <a href="#" className="flex items-center justify-center rounded-[3px] border border-[#E2E2E2] size-[31.5px] hover:bg-white/10 transition-colors">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
+            <Image src="/icons/linkedin.svg" alt="LinkedIn" width={16} height={16} className="h-4 w-4" />
           </a>
         </div>
 

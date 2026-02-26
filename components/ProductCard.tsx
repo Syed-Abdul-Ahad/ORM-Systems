@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ProductCardProps {
   id: string;
@@ -25,11 +26,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center md:items-center gap-4 hover:shadow-lg transition-shadow cursor-pointer">
       {/* Product Image - Top on mobile, Left on desktop */}
-      <div className="shrink-0 w-full md:w-44 h-36 md:h-44 flex items-center justify-center mb-5 md:mb-0">
-        <img 
+      <div className="shrink-0 w-full md:w-44 h-36 md:h-44 relative mb-5 md:mb-0">
+        <Image 
           src={image} 
           alt={name} 
-          className="w-full h-full object-contain"
+          fill
+          className="object-contain"
+          loading="lazy"
         />
       </div>
 
