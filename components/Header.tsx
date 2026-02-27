@@ -20,7 +20,7 @@ const Header = () => {
       <div className="mx-auto flex items-center justify-between h-20 px-4 md:px-12 relative">
         {/* Logo */}
         <div className="flex items-center h-full">
-          <Image src="/Logo.svg" alt="ORM Systems Logo" width={120} height={48} className="h-8 sm:h-12 w-auto" priority />
+          <Link href="/"><Image src="/Logo.svg" alt="ORM Systems Logo" width={120} height={48} className="h-8 sm:h-12 w-auto" priority/></Link>
         </div>
 
         {/* Desktop Nav */}

@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 const arrowSvg = (
@@ -16,7 +15,7 @@ const arrowSvg = (
 
 const Solutions = () => {
   return (
-    <section className="w-full py-12 px-2 md:px-8 max-w-[1280px] mx-auto">
+    <section className="w-full py-12 px-2 md:px-8 max-w-7xl mx-auto">
       <div className="p-6 md:p-10">
         <h2
           className="text-black font-forma text-[32px] md:text-[42px] font-normal not-italic leading-normal text-center mb-10"

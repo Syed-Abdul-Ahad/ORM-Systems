@@ -23,11 +23,11 @@ const Hero = () => {
         </div>
         {/* Heading */}
         <h1
-          className="text-white font-forma text-[40px] md:text-[64px] font-normal not-italic leading-[48px] md:leading-[74px] mb-4 text-left w-full max-w-2xl"
+          className="text-white font-forma text-[40px] md:text-[64px] font-normal not-italic leading-[48px] md:leading-[74px] mb-4 text-left w-full max-w-2xl break-words"
           style={{ fontFamily: 'Forma DJR Micro, Arial, Helvetica, sans-serif', fontWeight: 400 }}
         >
-          Revolutionizing Your<br className="hidden md:block" />
-          Data Center<br className="hidden md:block" />
+          Revolutionizing Your <br className="hidden md:block" />
+          Data Center <br className="hidden md:block" />
           Infrastructure
         </h1>
         {/* Paragraph */}

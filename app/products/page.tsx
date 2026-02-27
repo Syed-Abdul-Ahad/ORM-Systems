@@ -1,8 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import ProductCard from "@/components/ProductCard";
 import FilterSidebar from "@/components/FilterSidebar";
 import Loading from "@/components/Loading";
@@ -109,7 +107,6 @@ export default function ProductListingPage() {
 
   return (
     <div className="bg-white relative w-full min-h-screen">
-      <Header />
 
       <div className="max-w-7xl mx-auto">
         {/* Mobile Filter Button */}
@@ -198,7 +195,7 @@ export default function ProductListingPage() {
                   <div className="flex justify-center">
                     <button 
                       onClick={handleLoadMore}
-                      className="border border-black text-black font-medium text-[14px] px-12 py-3 rounded hover:bg-gray-50 transition-colors"
+                      className="border cursor-pointer border-black text-black font-medium text-[14px] px-12 py-3 rounded hover:bg-gray-50 transition-colors"
                     >
                       Load More Results
                     </button>
@@ -209,8 +206,6 @@ export default function ProductListingPage() {
           </main>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

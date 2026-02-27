@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ProductCardProps {
   id: string;
@@ -13,6 +14,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   name,
   description,
   price,
@@ -23,8 +25,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   const discountedPrice = price * (1 - discount / 100);
 
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Add to cart clicked for product:', id);
+    // Add your cart logic here
+  };
+
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center md:items-center gap-4 hover:shadow-lg transition-shadow cursor-pointer">
+    <Link href={`/products/${id}`} className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col md:flex-row items-center md:items-center gap-4 hover:shadow-lg transition-shadow cursor-pointer">
       {/* Product Image - Top on mobile, Left on desktop */}
       <div className="shrink-0 w-full md:w-44 h-36 md:h-44 relative mb-5 md:mb-0">
         <Image 
@@ -55,7 +64,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               <svg
                 key={index}
                 className={`w-4 h-4 ${
-                  index < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'
+                  index < Math.round(rating) ? 'text-yellow-400' : 'text-gray-300'
                 }`}
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -80,15 +89,21 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <span className="bg-green-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded whitespace-nowrap">
               27% off
         </span>
-        <button className="bg-[#165DBA] md:hidden hover:bg-blue-700 text-white font-medium text-[13px] px-8 md:px-10 py-2 rounded transition-colors whitespace-nowrap">
+        <button 
+          onClick={handleAddToCart}
+          className="bg-[#165DBA] md:hidden hover:bg-blue-700 text-white font-medium text-[13px] px-8 md:px-10 py-2 rounded transition-colors whitespace-nowrap"
+        >
           Add to Cart
         </button>
         </div>
-        <button className="bg-[#165DBA] hidden md:block hover:bg-blue-700 text-white font-medium text-[13px] px-8 md:px-10 py-2 rounded transition-colors whitespace-nowrap">
+        <button 
+          onClick={handleAddToCart}
+          className="bg-[#165DBA] hidden md:block hover:bg-blue-700 text-white font-medium text-[13px] px-8 md:px-10 py-2 rounded transition-colors whitespace-nowrap"
+        >
           Add to Cart
         </button>
       </div>
-    </div>
+    </Link>
   );
 };
 
